@@ -23,10 +23,14 @@ An arrow from function a to function b means that a calls b.
 ![cf](https://user-images.githubusercontent.com/64755588/168287506-b80a1e5c-68f0-4101-9b04-4e4b528920f4.png)
 
 The next diagram shows the framework acting only with 4 threads which is the case where the multiThreadLevel argument is 4.
-In this design all threads except thread 0 run three phases: Map, Sort and Reduce, while thread 0 also runs a special shuffle phase between its Sort and Reduce phases.
+In this design all threads except thread 0 run three phases: 
+Map, Sort and Reduce, while thread 0 also runs a special shuffle phase between its Sort and Reduce phases.
 In the general case (where multiThreadLevel=n):
+
 • Thread 0 runs Map, Sort, Shuffle and then Reduce.
+
 • Threads 1 through n-1 runs Map, Sort and then Reduce.
+
 The only thread that can run the shuffle phase is thread 0.
 
-![desc](https://user-images.githubusercontent.com/64755588/168287971-764d7bd6-aaf4-4fe2-b996-ec737eca9824.png)
+![de2](https://user-images.githubusercontent.com/64755588/168288451-d009b8ae-d014-4b0f-9d82-b897db2d83ee.png)
