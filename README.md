@@ -1,6 +1,8 @@
 # Multi-threaded-Programming
 Program that Implements the Map-Reduce algorithm of Multi-threaded-Programming paradigm, using main consepets of Operating Systems (i.e. threads, jobs, mutexes, atpmics, semaphores etc).
-High Level Overview: Performance is the major motivation for multi-threaded programming.
+
+High Level Overview:
+Performance is the major motivation for multi-threaded programming.
 Multiple processors can execute multiple threads at the same time and do the same amount of computations in less time than it will take a single processor.
 Two challenges complicate multi-threaded programming:
 1) In many cases it is difficult to split the big task into small parts that can run in parallel.
